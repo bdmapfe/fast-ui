@@ -1,6 +1,21 @@
 const uiPackage = {
   categories: [
       {
+          name: '布局组件',
+          nameEn: 'layout',
+          list: [
+              {
+                  name: 'Flex',
+                  version: '1.0.0',
+                  desc: 'Flex布局',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true,
+                  hasDoc: true
+              },
+          ]
+      },
+      {
           name: '基础组件',
           nameEn: 'basic',
           list: [
