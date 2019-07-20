@@ -1,0 +1,14 @@
+/*****字符串省略号截断*********/
+@mixin text-ellipsis() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@mixin flex() {
+    display: flex;
+}
+@mixin flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,100 @@
+/*******color(通用颜色、页面+卡片+卡片内容等颜色)********/
+/*通用颜色（8种常规色+2种辅助色，常规色用于普通文字、线条、背景，辅助色用于警示、价格、数字、链接等）*/
+/*常规色从黑到白，渐进分为8种*/
+$general-black-one: #333;
+$general-black-two: #666;
+$general-black-three: #999;
+$general-black-four: #ccc;
+$general-black-five: #eaeaea;
+$general-black-six: #f2f2f2;
+$general-black-seven: #f2f4f5;
+$general-black-eight: #fff;
+
+$assist-red-color: #f76464;
+$assist-blue-color: #3385ff;
+$assist-yellow-color: #ff9c38;
+
+/*主题色(primary palette、secondary palette、)*/
+$primary-color: #f5f6f7;
+$secondary-color: $general-black-eight;
+$secondary-color-dark: $general-black-six;
+$btn-primary-bg-color: $assist-blue-color;
+$btn-primary-border-color: $assist-blue-color;
+$btn-primary-bg-color-light: rgba(51, 133, 255, .5);
+
+/*页面+卡片背景色*/
+$page-color-bg-ios: $primary-color;
+$page-color-bg-android: $general-black-six;
+
+$card-color-bg: $secondary-color;
+$card-color-bg-pressed: $secondary-color-dark;
+$card-content-seg-color: $general-black-five;
+
+/*文字色（一级信息，普通级别、辅助信息、不可点击）*/
+$text-color-senior: $general-black-one;
+$text-color-normal: $general-black-two;
+$text-color-minor: $general-black-three;
+$text-color-disabled: $general-black-four;
+
+
+/****layout(内容padding、卡片间距、图文间距)****/
+$padding-normal: 30px;
+$margin-normal: 24px;
+$margin-senior: 30px;
+$margin-minor: 18px;
+$margin-mini: 16px;
+$margin-max: 60px;
+
+$padding-content-LR: 30px;
+$margin-card-TB: 16px;
+$margin-between-title-subtitle: 24px;
+$margin-between-desc: 18px;
+$margin-between-text-icon: 18px;
+$margin-between-image-text: 30px;
+$margin-left-cell-desc: 60px;
+
+
+/****fonts****/
+$font-size-max: 68px;
+$font-size-large: 42px;
+$font-size-senior: 32px;
+$font-size-normal: 28px;
+$font-size-minor: 26px;
+$font-size-mini: 18px;
+
+
+/****animations****/
+
+/****border(卡片描边,icon圆角)****/
+$border-card: none;
+$border-radius-icon: 2px;
+
+/****shadow****/
+
+/****zIndex****/
+
+/****disabled****/
+
+
+/****basics（基础组件、控件、icon）****/
+/*卡片中单行、两行跳转组件和底部跳转、展开组件*/
+$height-cell-one-line: 90px;
+$height-cell-two-line: 150px;
+$height-cell-bottom: 80px;
+
+$line-width-icon: 2px;
+
+/****buttons****/
+$btn-height-normal: 44px;
+$btn-width-normal: 164px;
+$btn-border-radius: 22px;
+$btn-opacity-pressed: .9;
+$btn-bg-color-white: $general-black-eight;
+$btn-color-white: $assist-blue-color;
+$btn-border-color-white: $assist-blue-color;
+$btn-color-disabled-white: $general-black-four;
+$btn-border-color-disabled-white: $general-black-four;
+
+$btn-bg-color-blue: $general-black-eight;
+$btn-border-color-blue: $assist-blue-color;
+$btn-bg-color-disabled-blue: $general-black-four;
