@@ -112,6 +112,7 @@
 <style lang="scss">
     @import "../../libs/css/public.scss";
     @import "../../libs/css/mixin.scss";
+    @import "../../libs/css/variable.scss";
 
     .fast-cell {
         display: block;
@@ -119,7 +120,7 @@
         text-decoration: none;
         -webkit-tap-highlight-color: transparent;
         outline: none;
-        color: #333;
+        color: $general-black-one;
 
         .fast-cell-container {
             @include flex();
@@ -133,7 +134,6 @@
             }
             .fast-cell-left {
                 @include flex();
-                /*flex: 1;*/
                 padding-right: 30px;
                 max-width: 65%;
                 align-items: center;
@@ -174,7 +174,7 @@
                     /*width: 92%;*/
                     font-size: 24px;
                     margin-top: 13px;
-                    color: #666;
+                    color: $general-black-two;
                     @include text-ellipsis
                 }
             }
@@ -186,7 +186,7 @@
             .fast-cell-right {
                 @include flex();
                 align-items: center;
-                color: #999;
+                color: $general-black-three;
                 margin-left: auto;
 
                 .fast-cell-desc {
