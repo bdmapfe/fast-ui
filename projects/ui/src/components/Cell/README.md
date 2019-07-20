@@ -36,7 +36,7 @@
 ```
 
 
-## slot
+## slot插槽
 | slot名称 | 说明
 |----- | ----- 
 | cell-left-slot | 左侧自定义slot插槽 
