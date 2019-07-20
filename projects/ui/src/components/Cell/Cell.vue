@@ -1,6 +1,7 @@
 <template>
     <a :href="linkUrl || 'javascript: void(0);'" class="fast-cell" :class="{'fast-cell-link': isLink}" :style="'background-color:' + bgColor">
         <ul class="fast-cell-container">
+            <!--左侧-->
             <li class="fast-cell-left">
                 <slot name="cell-left-slot">
                     <div class="fast-cell-left-cover" v-if="cover">
@@ -12,9 +13,13 @@
                     </div>
                 </slot>
             </li>
+
+            <!--居中-->
             <li class="fast-cell-center">
                 <slot name="cell-center-slot">{{centerText}}</slot>
             </li>
+
+            <!--右侧-->
             <li class="fast-cell-right">
                 <slot name="cell-right-slot">
                     <span class="fast-cell-desc" v-if="desc">{{desc}}</span>
@@ -93,16 +98,6 @@
                 type: String,
                 default: "#FFFFFF"
             }
-        },
-
-        data() {
-            return {
-
-            }
-        },
-
-        mounted() {
-            console.log(this.cover)
         },
 
         methods: {

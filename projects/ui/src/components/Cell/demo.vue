@@ -33,19 +33,6 @@
 
         components: {
             Cell
-        },
-
-        data() {
-            return {
-                // 是否展示select列表
-                isShowSelect: false,
-                // 当前选择列表 选中态的index
-                curSelectIndex: 0
-            }
-        },
-
-        methods: {
-
         }
     }
 </script>
