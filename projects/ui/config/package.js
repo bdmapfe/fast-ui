@@ -1,6 +1,30 @@
 const uiPackage = {
   categories: [
       {
+          name: '布局组件',
+          nameEn: 'layout',
+          list: [
+              {
+                  name: 'Flex',
+                  version: '1.0.0',
+                  desc: 'Flex布局',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true,
+                  hasDoc: true
+              },
+              {
+                  name: 'Cell',
+                  version: '1.0.0',
+                  desc: '列表项',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true,
+                  hasDoc: true
+              }
+          ]
+      },
+      {
           name: '基础组件',
           nameEn: 'basic',
           list: [
@@ -36,6 +60,21 @@ const uiPackage = {
                   version: '1.0.0',
                   desc: '弹窗',
                   type: 'plugin',
+                  author: 'hwm',
+                  hasDemo: true,
+                  hasDoc: true
+              }
+          ]
+      },
+      {
+          name: '表单组件',
+          nameEn: 'form',
+          list: [
+              {
+                  name: 'Input',
+                  version: '1.0.0',
+                  desc: '文本输入框',
+                  type: 'component',
                   author: 'hwm',
                   hasDemo: true,
                   hasDoc: true

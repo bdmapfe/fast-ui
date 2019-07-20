@@ -4,11 +4,46 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 @mixin flex() {
     display: flex;
 }
+
 @mixin flex-center() {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+// 箭头
+@mixin arrow($direction:right, $size:20px, $border: 1px, $color:#c8cacc) {
+    display: inline-block;
+    -o-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border: $border solid $color; /*no*/
+    height: $size;
+    width: $size;
+    vertical-align: 0px;
+    @if $direction == top {
+        border-right: 0;
+        border-bottom: 0;
+        margin: $size/2 $size/2 0 0;
+    }
+    @else if $direction == bottom {
+        border-left: 0;
+        border-top: 0;
+        margin: 0 $size/2 $size/2 0;
+    }
+    @else if $direction == right {
+        border-left: 0;
+        border-bottom: 0;
+        margin-right: $size/2;
+    }
+    @else if $direction == left {
+        border-right: 0;
+        border-top: 0;
+        margin-left: $size/2;
+    }
 }
