@@ -1,7 +1,6 @@
 /**
  * @file vue.config.js文件，主要用于配置webpack
  * @type {{configureWebpack: module.exports.configureWebpack}}
- * context: '/Users/huangwenming/projects/baidu/map-car/car-project'
  * 配置文件中的相对路径的basePath：vue.config.js的绝对路径
  */
 module.exports = {
