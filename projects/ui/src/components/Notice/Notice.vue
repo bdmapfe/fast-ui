@@ -46,7 +46,7 @@
         padding: 0 $padding-content-LR;
         height: $height-cell-one-line;
         background-color: $card-color-bg;
-        @include flex();
+        @include flex-center();
     }
     .notice-item .type {
         width: 60px;
