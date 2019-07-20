@@ -39,6 +39,15 @@ const uiPackage = {
                   author: 'hwm',
                   hasDemo: true,
                   hasDoc: true
+              },
+              {
+                  name: 'Cell',
+                  version: '1.0.0',
+                  desc: '列表项',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true,
+                  hasDoc: true
               }
           ]
       },
