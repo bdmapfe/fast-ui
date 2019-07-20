@@ -193,7 +193,7 @@
                 }
 
                 .fast-cell-arrow {
-                    @include arrow;
+                    @include arrow(right, 16px);
                     margin: auto 0 auto 5px;
                 }
 
