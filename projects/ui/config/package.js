@@ -92,6 +92,14 @@ const uiPackage = {
                   type: 'directive',
                   author: 'hwm',
                   hasDemo: true
+              },
+              {
+                  name: 'linechat',
+                  version: '1.0.0',
+                  desc: '折线图组件',
+                  type: 'directive',
+                  author: 'cc',
+                  hasDemo: true
               }
           ]
       },
