@@ -63,6 +63,15 @@ const uiPackage = {
                   author: 'hwm',
                   hasDemo: true,
                   hasDoc: true
+              },
+              {
+                  name: 'Button',
+                  version: '1.0.0',
+                  desc: '按钮',
+                  type: 'component',
+                  author: 'yst',
+                  hasDemo: true,
+                  hasDoc: true
               }
           ]
       },
@@ -91,6 +100,14 @@ const uiPackage = {
                   desc: 'svg素材更换颜色',
                   type: 'directive',
                   author: 'hwm',
+                  hasDemo: true
+              },
+              {
+                  name: 'linechat',
+                  version: '1.0.0',
+                  desc: '折线图组件',
+                  type: 'directive',
+                  author: 'cc',
                   hasDemo: true
               }
           ]

@@ -24,7 +24,7 @@
                 <slot name="cell-right-slot">
                     <span class="fast-cell-desc" v-if="desc">{{desc}}</span>
                     <span class="fast-cell-arrow" v-if="showArrow"></span>
-                    <span class="fast-cell-icon" v-if="controlConfig" :style="'border-radius:' + controlConfig.borderRadius" @click.stop="clickRightIcon">
+                    <span class="fast-cell-icon" v-if="controlConfig" :style="'border-radius:' + controlConfig.borderRadius" @click.stop="clickControl">
                     <img :src="controlConfig.img" v-if="controlConfig.img">
                 </span>
                 </slot>
@@ -102,7 +102,6 @@
 
         methods: {
             clickControl() {
-                console.log('click right control');
                 this.$emit('click-right-control');
             }
         }
@@ -194,7 +193,7 @@
                 }
 
                 .fast-cell-arrow {
-                    @include arrow;
+                    @include arrow(right, 16px);
                     margin: auto 0 auto 5px;
                 }
 
