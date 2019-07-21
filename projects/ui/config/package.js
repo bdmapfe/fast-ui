@@ -63,6 +63,15 @@ const uiPackage = {
                   author: 'hwm',
                   hasDemo: true,
                   hasDoc: true
+              },
+              {
+                  name: 'Button',
+                  version: '1.0.0',
+                  desc: '按钮',
+                  type: 'component',
+                  author: 'yst',
+                  hasDemo: true,
+                  hasDoc: true
               }
           ]
       },
