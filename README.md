@@ -1,14 +1,14 @@
 ## 快速构建基于Vue的UI库
 > 主要是提供一个组件库的原型，支持demo、文档、单元测试和编译产出等能力，帮助前端开发者快速构建基于Vue的组件库。
 
-## demo示例
+## [demo示例](http://106.13.62.215:8000/demos/home.html)
 ```
     npm install
     npm run serve demos
 ```
 截图：  
 ![image](https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/map/pic/item/a686c9177f3e67090cd79a1435c79f3df9dc5502.jpg)
-## docs示例
+## [docs示例](http://106.13.62.215:8000/docs/home.html)
 ```
     npm run serve docs
 ```

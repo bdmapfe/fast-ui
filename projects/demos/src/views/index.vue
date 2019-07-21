@@ -1,7 +1,7 @@
 <template>
     <div class="demo-list-wrapper">
         <div class="github-btn">
-            <a href="https://github.com/huangwenming/fast-ui-lib" target="_blank" class="github-icon"></a>
+            <a href="https://github.com/bdmapfe/fast-ui" target="_blank" class="github-icon"></a>
             <p>Github</p>
         </div>
         <div class="logo-container">

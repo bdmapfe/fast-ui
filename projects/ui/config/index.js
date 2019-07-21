@@ -57,11 +57,10 @@ module.exports = {
     },
     // 远程部署开发机地址
     remote: {
-        huangwenming: {
-            // receiver: 'http://10.64.17.76:8999/receiver',
-            receiver: 'http://yq01-mapcarowner-rddev-fe01.epc.baidu.com:8999/receiver',
-            // 8096
-            address: '/home/users/huangwenming/hwm/htdocs/fastui'
+        bdy: {
+            receiver: 'http://106.13.62.215:8999/receiver',
+            // 8000
+            address: '/root/hwm/home/fastui'
         }
     }
 };
