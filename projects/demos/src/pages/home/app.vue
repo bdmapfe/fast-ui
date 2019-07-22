@@ -15,7 +15,6 @@
 
 <style lang="scss">
     @import "../../libs/css/base.scss";
-
     body {
         font-size: 32px;
         margin: 0;

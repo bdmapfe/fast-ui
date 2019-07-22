@@ -20,6 +20,7 @@ export default {
     Scroll,
     Select,
     Cell,
+
     changesvgcolor,
 
     Dialog,
