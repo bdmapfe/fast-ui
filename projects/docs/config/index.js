@@ -57,13 +57,10 @@ module.exports = {
     },
     // 远程部署开发机地址
     remote: {
-        huangwenming: {
-            // receiver: 'http://10.64.17.76:8999/receiver',
-            receiver: 'http://yq01-mapcarowner-rddev-fe01.epc.baidu.com:8999/receiver',
-            // 8099
-            address: '/home/users/huangwenming/odp/webroot/docs'
-            // 8096
-            // address: '/home/users/huangwenming/hwm/htdocs/docs'
+        bdy: {
+            receiver: 'http://106.13.62.215:8999/receiver',
+            // 8000
+            address: '/root/hwm/home/docs'
         }
     },
     // 入口js与入口模板html映射表

@@ -3,7 +3,10 @@
         <nav class="app-nav">
             <ul>
                 <li>
-                    <a href="https://github.com/huangwenming/fast-ui-lib">demos</a>
+                    <a href="http://106.13.62.215:8000/demos/home.html">demos</a>
+                </li>
+                <li>
+                    <a href="https://github.com/huangwenming/fast-ui-lib">ui-libs</a>
                 </li>
             </ul>
         </nav>
@@ -54,7 +57,7 @@
             return {
                 forceHideBar: false,
                 sideNavs: uiConfig.categories,
-                demoUrl: 'http://yq01-mapcarowner-rddev-fe01.epc.baidu.com:8096/demos/home.html/index'
+                demoUrl: 'http://106.13.62.215:8000/demos/home.html'
             }
         },
         methods: {
@@ -63,7 +66,7 @@
             },
             changeDemoUrl(demoName) {
                 this.$router.push({path: '/' + demoName});
-                this.demoUrl = 'http://yq01-mapcarowner-rddev-fe01.epc.baidu.com:8096/demos/home.html/' + demoName;
+                this.demoUrl = 'http://106.13.62.215:8000/demos/home.html/' + demoName;
                 console.log(this.demoUrl);
             }
         }
