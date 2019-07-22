@@ -1,6 +1,30 @@
 const uiPackage = {
   categories: [
       {
+          name: '布局组件',
+          nameEn: 'layout',
+          list: [
+              {
+                  name: 'Flex',
+                  version: '1.0.0',
+                  desc: 'Flex布局',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true,
+                  hasDoc: true
+              },
+              {
+                  name: 'Cell',
+                  version: '1.0.0',
+                  desc: '列表项',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true,
+                  hasDoc: true
+              }
+          ]
+      },
+      {
           name: '基础组件',
           nameEn: 'basic',
           list: [
@@ -43,6 +67,21 @@ const uiPackage = {
           ]
       },
       {
+          name: '表单组件',
+          nameEn: 'form',
+          list: [
+              {
+                  name: 'Input',
+                  version: '1.0.0',
+                  desc: '文本输入框',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true,
+                  hasDoc: true
+              }
+          ]
+      },
+      {
           name: '数据展示',
           nameEn: 'dataDisplay',
           list: [
@@ -52,6 +91,14 @@ const uiPackage = {
                   desc: 'svg素材更换颜色',
                   type: 'directive',
                   author: 'hwm',
+                  hasDemo: true
+              },
+              {
+                  name: 'linechat',
+                  version: '1.0.0',
+                  desc: '折线图组件',
+                  type: 'directive',
+                  author: 'cc',
                   hasDemo: true
               }
           ]

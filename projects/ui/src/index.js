@@ -4,6 +4,7 @@ import { version } from '../../../package.json';
 import Notice from '../src/components/Notice/Notice.vue';
 import Scroll from '../src/components/Scroll/Scroll.vue';
 import Select from '../src/components/Select/Select.vue';
+import Cell from '../src/components/Cell/Cell.vue';
 
 // 引入Vue UI指令
 import changesvgcolor from '../src/directives/changesvgcolor/index.js';
@@ -18,6 +19,7 @@ export default {
     Notice,
     Scroll,
     Select,
+    Cell,
 
     changesvgcolor,
 
