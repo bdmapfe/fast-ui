@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "description": "Help front-end developers quickly build UI libraries based on Vue",
+    "description": "An UI library based on Vue for bdmapfe",
     "private": true,
     "scripts": {
         "serve": "NODE_ENV=development node build.js $1",
@@ -73,10 +73,10 @@
         "vue",
         "UI"
     ],
-    "author": "huangwenming",
+    "author": "bdmapfe",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/huangwenming/fast-ui-lib/issues"
+        "url": "https://github.com/bdmapfe/fast-ui/issues"
     },
-    "homepage": "https://github.com/huangwenming/fast-ui-lib#readme"
+    "homepage": "https://github.com/bdmapfe/fast-ui#readme"
 }
