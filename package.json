@@ -12,14 +12,15 @@
         "build-real": "vue-cli-service build",
         "lint": "vue-cli-service lint",
         "test": "NODE_ENV=test node build.js ui",
-        "test-real": "nyc --reporter=lcov --reporter=text vue-cli-service test:unit --require tests/unit/pre-setup.js projects/ui/src/**/__tests__/**.spec.js"
+        "test-real": "nyc --reporter=lcov --reporter=text vue-cli-service test:unit --require tests/unit/pre-setup.js ./projects/ui/src/**/*.spec.js",
+        "coveralls": "cat ./coverage/lcov.info | coveralls"
     },
     "libconfig": {
         "module": "ui"
     },
     "nyc": {
         "include": [
-            "projects/ui/src/**/*.{js,vue}"
+            "projects/ui/src/**/*.{vue,js}"
         ],
         "exclude": [
             "projects/ui/src/*.js"
@@ -64,6 +65,7 @@
         "sass-loader": "^7.0.1",
         "vue-markdown-loader": "^2.4.1",
         "vue-template-compiler": "^2.6.10",
+        "webpack-node-externals": "^1.7.2",
         "webpack-upload": "^2.1.1"
     },
     "keywords": [

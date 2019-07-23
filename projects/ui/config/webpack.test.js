@@ -27,22 +27,23 @@ let projectConfig = {
     // 当运行 vue-cli-service build 时生成的生产环境构建文件的目录(demos/dist目录下)
     outputDir: config.build.assetsRoot,
     configureWebpack: {
-        // entry: path.resolve(__dirname, '../src/index.js'),
-        output: {
-            libraryExport: 'default'
-        },
-        /*module: {
+        entry: path.resolve(__dirname, '../src/index.js'),
+        module: {
             rules: [
                 {
-                    test: /\.js$|\.vue$/,
+                    test: /\.(js)$/,
                     use: {
                         loader: 'istanbul-instrumenter-loader',
                         options: { esModules: true }
                     },
-                    include: path.resolve(__dirname, '../src/components/')
+                    include: [
+                        path.resolve(__dirname, '../src/components/'),
+                        path.resolve(__dirname, '../src/directives/'),
+                        path.resolve(__dirname, '../src/plugins/')
+                    ]
                 }
             ]
-        },*/
+        },
 
         resolve: {
             // 路径alias：例如import @/services/a.js，会自动寻找 src/services/a.js
@@ -52,15 +53,17 @@ let projectConfig = {
                 'vue$': 'vue/dist/vue.esm.js'
             }
         },
-        plugins
+        plugins,
+        devtool: 'inline-cheap-module-source-map',
+        externals: [require('webpack-node-externals')()]
     },
     chainWebpack: config => {
         // 首先将commonConfig中的chainWebpack配置merge到具体项目中
         commonConfig.chainWebpack && commonConfig.chainWebpack.call(projectConfig, config);
-        config.module
+        /*config.module
             .rule("istanbul")
-            .test(/\.(js|vue)$/)
-            // .test(/\.(js)$/)
+            // .test(/\.(js|vue)$/)
+            .test(/\.(js)$/)
             .enforce("post")
             .include.add(path.resolve(__dirname, '../src/components/'))
             .add(path.resolve(__dirname, '../src/directives/'))
@@ -68,7 +71,7 @@ let projectConfig = {
             .use("istanbul-instrumenter-loader")
             .loader("istanbul-instrumenter-loader")
             .options({ esModules: true })
-            .end();
+            .end();*/
     }
 };
 
