@@ -72,6 +72,15 @@ const uiPackage = {
                   author: 'yst',
                   hasDemo: true,
                   hasDoc: true
+              },
+              {
+                  name: 'Icon',
+                  version: '1.0.0',
+                  desc: '图标',
+                  type: 'component',
+                  author: 'yc',
+                  hasDemo: true,
+                  hasDoc: true
               }
           ]
       },
