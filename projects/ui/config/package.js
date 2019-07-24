@@ -100,21 +100,6 @@ const uiPackage = {
           ]
       },
       {
-          name: '表单组件',
-          nameEn: 'form',
-          list: [
-              {
-                  name: 'Input',
-                  version: '1.0.0',
-                  desc: '文本输入框',
-                  type: 'component',
-                  author: 'hwm',
-                  hasDemo: true,
-                  hasDoc: true
-              }
-          ]
-      },
-      {
           name: '数据展示',
           nameEn: 'dataDisplay',
           list: [

@@ -1,4 +1,5 @@
-## 快速构建基于Vue的UI库
+# 快速构建基于Vue的UI库
+[![Build Status](https://api.travis-ci.org/bdmapfe/fast-ui.svg?branch=master)](https://github.com/bdmapfe/fast-ui/) [![Coverage Status](https://coveralls.io/repos/github/bdmapfe/fast-ui/badge.svg?branch=master)](https://coveralls.io/github/bdmapfe/fast-ui?branch=master)
 > 主要是提供一个组件库的原型，支持demo、文档、单元测试和编译产出等能力，帮助前端开发者快速构建基于Vue的组件库。
 
 ## [demo示例](http://106.13.62.215:8000/demos/home.html)

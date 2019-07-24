@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "description": "Help front-end developers quickly build UI libraries based on Vue",
+    "description": "An UI library based on Vue for bdmapfe",
     "private": true,
     "scripts": {
         "serve": "NODE_ENV=development node build.js $1",
@@ -12,14 +12,15 @@
         "build-real": "vue-cli-service build",
         "lint": "vue-cli-service lint",
         "test": "NODE_ENV=test node build.js ui",
-        "test-real": "nyc --reporter=lcov --reporter=text vue-cli-service test:unit --require tests/unit/pre-setup.js projects/ui/src/**/__tests__/**.spec.js"
+        "test-real": "nyc --reporter=lcov --reporter=text vue-cli-service test:unit --require tests/unit/pre-setup.js ./projects/ui/src/**/*.spec.js",
+        "coveralls": "cat ./coverage/lcov.info | coveralls"
     },
     "libconfig": {
         "module": "ui"
     },
     "nyc": {
         "include": [
-            "projects/ui/src/**/*.{js,vue}"
+            "projects/ui/src/**/*.{vue,js}"
         ],
         "exclude": [
             "projects/ui/src/*.js"
@@ -52,6 +53,7 @@
         "babel-preset-env": "^1.7.0",
         "babel-preset-stage-2": "^6.24.1",
         "chai": "^4.1.2",
+        "coveralls": "^3.0.5",
         "eslint": "^5.8.0",
         "eslint-plugin-vue": "^5.0.0",
         "fs": "0.0.1-security",
@@ -64,16 +66,17 @@
         "sass-loader": "^7.0.1",
         "vue-markdown-loader": "^2.4.1",
         "vue-template-compiler": "^2.6.10",
+        "webpack-node-externals": "^1.7.2",
         "webpack-upload": "^2.1.1"
     },
     "keywords": [
         "vue",
         "UI"
     ],
-    "author": "huangwenming",
+    "author": "bdmapfe",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/huangwenming/fast-ui-lib/issues"
+        "url": "https://github.com/bdmapfe/fast-ui/issues"
     },
-    "homepage": "https://github.com/huangwenming/fast-ui-lib#readme"
+    "homepage": "https://github.com/bdmapfe/fast-ui#readme"
 }
