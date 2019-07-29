@@ -104,6 +104,14 @@ const uiPackage = {
           nameEn: 'dataDisplay',
           list: [
               {
+                  name: 'Swiper',
+                  version: '1.0.0',
+                  desc: 'h5-swiper',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true
+              },
+              {
                   name: 'changesvgcolor',
                   version: '1.0.0',
                   desc: 'svg素材更换颜色',
