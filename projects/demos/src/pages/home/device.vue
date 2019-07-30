@@ -24,7 +24,7 @@
 </script>
 
 <style lang="scss">
-@import '../../libs/css/devices.min.css';
+@import '../../libs/css/devices.min.scss';
 
 .device {
     position: relative;

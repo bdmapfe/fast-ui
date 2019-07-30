@@ -1,37 +1,40 @@
 <template>
     <div class="app">
         <div class="swiper-container">
-            <swiper :page-transition="pageTransition" :loop="loop" :autoplay="autoplay"
+            <fast-swiper :type="swiperType" :page-transition="pageTransition" :loop="loop" :autoplay="autoplay"
                     :interval="interval" :show-indicator="showIndicator" @beforeChange="beforeChange"
                     @afterChange="afterChange">
-                <swiper-item v-for="(color, index) in colors" :key="index">
+                <fast-swiper-item v-for="(color, index) in colors" :key="index">
                     <div :style="{backgroundColor: color}" class="swiper-item-content">
                         <div>{{index + 1}}</div>
                     </div>
-                </swiper-item>
-            </swiper>
+                </fast-swiper-item>
+            </fast-swiper>
         </div>
         <div class="operation-card">
-            <p>swipe Transition</p>
+            <p class="opertaion-item">Swiper Type</p>
+            <select v-model="swiperType" class="select-container">
+                <option v-for="(item, index) in swiperTypes" :key="index" :label="item" :value="item"></option>
+            </select>
+            <p class="opertaion-item">swipe Transition</p>
             <select v-model="pageTransition" class="select-container">
                 <option v-for="(item, index) in pageTransitions" :key="index" :label="item" :value="item"></option>
             </select>
-            <p>Autoplay</p>
-            <input class="checkbox-box" type="checkbox" v-model="autoplay"/>autoplay
-            <p>Interval</p>
+            <p class="opertaion-item">Autoplay</p>
+            <input class="checkbox-box" type="checkbox" v-model="autoplay"/>&nbsp;autoplay
+            <p class="opertaion-item">Interval</p>
             <input :disabled="!autoplay" controls-position="right" v-model="interval" :min="100" :max="10000" :step="100"/>
-            <p>Loop</p>
-            <input class="checkbox-box" type="checkbox" v-model="loop"/>
-            <p>Show Indicator</p>
-            <input class="checkbox-box" type="checkbox" v-model="showIndicator"/>
+            <p class="opertaion-item">Loop</p>
+            <input class="checkbox-box" type="checkbox" v-model="loop"/>&nbsp;loop
+            <p class="opertaion-item">Show Indicator</p>
+            <input class="checkbox-box" type="checkbox" v-model="showIndicator"/>&nbsp;indicator
         </div>
     </div>
 </template>
 
 <script>
-    import Swiper from './Swiper.vue';
-    import SwiperItem from './SwiperItem.vue';
-    import CheckBox from "../../../../docs/src/views/CheckBox";
+    import fastSwiper from './Swiper.vue';
+    import fastSwiperItem from './SwiperItem.vue';
 
     const PAGE_TRANSITIONS = [
         'move',
@@ -47,13 +50,18 @@
 
     export default {
         components: {
-            CheckBox,
-            Swiper,
-            SwiperItem
+            fastSwiper,
+            fastSwiperItem
         },
 
         data() {
             return {
+                // swiper的类型，支持vertical和horizontal两种形式
+                swiperType: 'horizontal',
+                swiperTypes: [
+                    'horizontal',
+                    'vertical'
+                ],
                 colors: [
                     '#76D7C4',
                     '#F1948A',
@@ -91,7 +99,7 @@
         .swiper-container {
             position: relative;
             height: 300px;
-            overflow-y: hidden;
+            overflow: hidden;
         }
         .swiper-item-content {
             position: absolute;
@@ -107,6 +115,9 @@
             background-color: #fff;
             box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
             padding: 30px;
+            .opertaion-item {
+                padding: 16px;
+            }
             .select-container {
                 border: 2px solid #EBEEF5;
                 background-color: #FFF;
