@@ -72,6 +72,15 @@ const uiPackage = {
                   author: 'yst',
                   hasDemo: true,
                   hasDoc: true
+              },
+              {
+                  name: 'Icon',
+                  version: '1.0.0',
+                  desc: '图标',
+                  type: 'component',
+                  author: 'yc',
+                  hasDemo: true,
+                  hasDoc: true
               }
           ]
       },
@@ -94,6 +103,14 @@ const uiPackage = {
           name: '数据展示',
           nameEn: 'dataDisplay',
           list: [
+              {
+                  name: 'Swiper',
+                  version: '1.0.0',
+                  desc: 'h5-swiper',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true
+              },
               {
                   name: 'changesvgcolor',
                   version: '1.0.0',

@@ -1,15 +1,28 @@
 <template>
-    <div class="demo-wrapper">
-        <keep-alive>
+    <div class="demo-wrapper" :class="{'demo-frame-wrapper': isInFrame}">
+        <device v-if="isInFrame">
+            <keep-alive>
+                <router-view ></router-view>
+            </keep-alive>
+        </device>
+        <keep-alive v-else>
             <router-view ></router-view>
         </keep-alive>
-
     </div>
 </template>
 
 <script>
+    import device from './device.vue'
     export default {
-        name: "app"
+        name: "app",
+        components: {
+            device
+        },
+        data() {
+            return {
+                isInFrame: window.frames.length !== parent.frames.length
+            }
+        }
     }
 </script>
 
@@ -29,6 +42,12 @@
         padding-top: 40px;
         box-sizing: border-box;
         background: #f6f6f6;
+    }
+    .demo-frame-wrapper {
+        padding-top: 0;
+    }
+    .demo-frame-wrapper /deep/ .github-btn {
+        top: 0;
     }
     div, span, p, ul, li {
         margin: 0;
