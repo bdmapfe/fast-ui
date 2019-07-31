@@ -192,9 +192,10 @@
         }
         .demos-frame {
             flex-shrink: 0;
-            width: 600px;
-            padding: 100px 40px;
-            height: 1000px;
+            margin-top: 50px;
+            width: 423Px;
+            height: 977Px;
+            overflow-y: hidden;
             iframe {
                 border: none;
                 box-shadow: 0 0 9px 5px #eee;
@@ -232,6 +233,10 @@
             padding-top: 20px;
             transition: transform .25s ease;
             @include flex(column);
+        }
+        .demos-frame {
+            transform: scale(.7);
+            transform-origin: top left;
         }
     }
     .docs-wrapper {

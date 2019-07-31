@@ -18,7 +18,7 @@ const uiPackage = {
                   version: '1.0.0',
                   desc: '列表项',
                   type: 'component',
-                  author: 'hwm',
+                  author: 'zxy',
                   hasDemo: true,
                   hasDoc: true
               }
@@ -113,6 +113,14 @@ const uiPackage = {
           nameEn: 'dataDisplay',
           list: [
               {
+                  name: 'Swiper',
+                  version: '1.0.0',
+                  desc: 'h5-swiper',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true
+              },
+              {
                   name: 'changesvgcolor',
                   version: '1.0.0',
                   desc: 'svg素材更换颜色',
@@ -126,6 +134,14 @@ const uiPackage = {
                   desc: '折线图组件',
                   type: 'directive',
                   author: 'cc',
+                  hasDemo: true
+              },
+              {
+                  name: 'Skeleton',
+                  version: '1.0.0',
+                  desc: '骨架图',
+                  type: 'component',
+                  author: 'zxy',
                   hasDemo: true
               }
           ]

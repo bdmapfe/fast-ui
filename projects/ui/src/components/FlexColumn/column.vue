@@ -1,5 +1,5 @@
 <template>
-    <div class="fast-column" :class="classObject">
+    <div class="fast-column" :class="classObject" :style="{margin: margin}">
         <slot></slot>
     </div>
 </template>
@@ -15,6 +15,10 @@
             offset: {
                 type: [String, Number],
                 default: 0,
+            },
+            margin: {
+                type: String,
+                default: '0 0 0 0'
             }
         },
         computed: {

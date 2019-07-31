@@ -67,6 +67,7 @@
 </script>
 
 <style scoped lang="scss">
+    @import "@/libs/css/base.scss";
     @import "@/libs/css/mixin.scss";
     .demo-list-wrapper {
         position: relative;
