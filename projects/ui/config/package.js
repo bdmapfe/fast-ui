@@ -81,6 +81,15 @@ const uiPackage = {
                   author: 'yc',
                   hasDemo: true,
                   hasDoc: true
+              },
+              {
+                  name: 'Rate',
+                  version: '1.0.0',
+                  desc: '评分',
+                  type: 'component',
+                  author: 'cc',
+                  hasDemo: true,
+                  hasDoc: true
               }
           ]
       },
