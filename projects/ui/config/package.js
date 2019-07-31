@@ -18,7 +18,7 @@ const uiPackage = {
                   version: '1.0.0',
                   desc: '列表项',
                   type: 'component',
-                  author: 'hwm',
+                  author: 'zxy',
                   hasDemo: true,
                   hasDoc: true
               }
@@ -125,6 +125,14 @@ const uiPackage = {
                   desc: '折线图组件',
                   type: 'directive',
                   author: 'cc',
+                  hasDemo: true
+              },
+              {
+                  name: 'Skeleton',
+                  version: '1.0.0',
+                  desc: '骨架图',
+                  type: 'component',
+                  author: 'zxy',
                   hasDemo: true
               }
           ]
