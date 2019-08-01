@@ -42,7 +42,9 @@
                     </keep-alive>
                 </div>
                 <div class="demos-frame">
-                    <iframe width="100%" height="100%" :src="demoUrl"></iframe>
+                    <device>
+                        <iframe width="100%" height="100%" :src="demoUrl"></iframe>
+                    </device>
                 </div>
             </section>
         </main>
@@ -50,9 +52,12 @@
 </template>
 
 <script>
+    import device from './device.vue'
     import uiConfig from '@ui/config/package.js';
+    import Device from "./device";
     export default {
         name: "app",
+        components: {Device},
         data() {
             return {
                 forceHideBar: false,

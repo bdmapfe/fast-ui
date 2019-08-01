@@ -101,8 +101,8 @@
         },
 
         methods: {
-            clickControl() {
-                this.$emit('click-right-control');
+            clickControl(event) {
+                this.$emit('click-right-control', event);
             }
         }
     }
@@ -168,7 +168,7 @@
                     font-size: 28px;
                     @include text-ellipsis;
                 }
-                
+
                 .fast-cell-sub-title {
                     /*width: 92%;*/
                     font-size: 24px;
