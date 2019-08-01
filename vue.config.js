@@ -65,5 +65,20 @@ module.exports = {
                 options.data = `@import "@ui/libs/css/public.scss";`;
                 return options
             });
+        // 解决css中calc()兼容问题，配置参考：https://segmentfault.com/a/1190000016034968
+        // 参考：https://github.com/cssnano/cssnano/issues/578#issuecomment-430014825
+        if (process.env.NODE_ENV === 'production') {
+            config.plugin('optimize-css')
+                .tap(([{ cssnanoOptions, ...args }]) => {
+                    const preset = cssnanoOptions.preset || []
+                    preset.forEach(item => {
+                        if (typeof item === 'object') {
+                            item.calc = false;
+                        }
+                    });
+                    cssnanoOptions.preset = preset;
+                    return [{ cssnanoOptions, ...args }]
+                });
+        }
     }
 };
