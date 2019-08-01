@@ -105,6 +105,15 @@ const uiPackage = {
                   author: 'hwm',
                   hasDemo: true,
                   hasDoc: true
+              },
+              {
+                  name: 'ActionSheet',
+                  version: '1.0.0',
+                  desc: '动作面板',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true,
+                  hasDoc: true
               }
           ]
       },
