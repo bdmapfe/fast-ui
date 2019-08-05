@@ -24,7 +24,7 @@ const uiPackage = {
               }
           ]
       },
-      {
+      { 
           name: '基础组件',
           nameEn: 'basic',
           list: [
@@ -81,7 +81,34 @@ const uiPackage = {
                   author: 'yc',
                   hasDemo: true,
                   hasDoc: true
-              }
+              },
+              {
+                  name: 'Radio',
+                  version: '1.0.0',
+                  desc: '单选框',
+                  type: 'component',
+                  author: 'lb',
+                  hasDemo: true,
+                  hasDoc: true
+              },
+              {
+                name: 'CheckBox',
+                version: '1.0.0',
+                desc: '复选框',
+                type: 'component',
+                author: 'lb',
+                hasDemo: true,
+                hasDoc: true
+            },
+            {
+                name: 'Switch',
+                version: '1.0.0',
+                desc: '开关',
+                type: 'component',
+                author: 'lb',
+                hasDemo: true,
+                hasDoc: true
+            }
           ]
       },
       {
