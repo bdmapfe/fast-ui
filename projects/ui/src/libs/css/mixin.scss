@@ -15,6 +15,12 @@
     justify-content: center;
 }
 
+/********iphonex适配*********/
+@mixin iphonex($paddingMargin: padding, $postion: bottom) {
+    #{$paddingMargin}-#{$postion}: constant(safe-area-inset-#{$postion});
+    #{$paddingMargin}-#{$postion}: env(safe-area-inset-#{$postion});
+}
+
 // 箭头
 @mixin arrow($direction:right, $size:20px, $border: 1px, $color:#c8cacc) {
     display: inline-block;

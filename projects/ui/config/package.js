@@ -163,6 +163,20 @@ const uiPackage = {
               }
           ]
       },
+      {
+          name: '业务组件',
+          nameEn: 'CarPlatePrefixer',
+          list: [
+              {
+                  name: 'CarPlatePrefixer',
+                  version: '1.0.0',
+                  desc: '车牌归属地选择面板',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true
+              }
+          ]
+      },
   ]
 };
 export default uiPackage;
