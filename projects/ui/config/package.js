@@ -152,6 +152,14 @@ const uiPackage = {
                   type: 'component',
                   author: 'zxy',
                   hasDemo: true
+              },
+              {
+                  name: 'Accordion',
+                  version: '1.0.0',
+                  desc: '手风琴',
+                  type: 'component',
+                  author: 'zxy',
+                  hasDemo: true
               }
           ]
       },
