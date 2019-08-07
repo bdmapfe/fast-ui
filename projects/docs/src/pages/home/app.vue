@@ -6,7 +6,7 @@
                     <a href="http://106.13.62.215:8000/demos/home.html">demos</a>
                 </li>
                 <li>
-                    <a href="https://github.com/huangwenming/fast-ui-lib">ui-libs</a>
+                    <a href="https://github.com/huangwenming/fast-ui-lib">ui-template</a>
                 </li>
             </ul>
         </nav>
@@ -197,9 +197,9 @@
         }
         .demos-frame {
             flex-shrink: 0;
-            margin-top: 50px;
-            width: 423Px;
-            height: 977Px;
+            margin-top: 70px;
+            width: 363Px;
+            height: 777Px;
             overflow-y: hidden;
             iframe {
                 border: none;
