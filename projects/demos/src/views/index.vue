@@ -1,6 +1,6 @@
 <template>
     <div class="demo-list-wrapper">
-        <div class="github-btn">
+        <div class="github-btn" :class="{'github-btn-inframe' : isInFrame}">
             <a href="https://github.com/bdmapfe/fast-ui" target="_blank" class="github-icon"></a>
             <p>Github</p>
         </div>
@@ -42,7 +42,8 @@
             return {
                 categories: [],
                 version,
-                foldStatus: []
+                foldStatus: [],
+                isInFrame: window.frames.length !== parent.frames.length
             };
         },
         created() {
@@ -80,6 +81,9 @@
         @include flex(column);
         @include box-center();
         opacity: .5;
+    }
+    .github-btn-inframe {
+        top: 0;
     }
     .github-icon {
         display: inline-block;

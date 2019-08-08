@@ -28,8 +28,8 @@
 
 .device {
     position: relative;
-    height: 877Px;
-    width: 423Px;
+    height: 677Px;
+    width: 363Px;
     overflow: hidden;
     & > div {
         transform: scale(1);
