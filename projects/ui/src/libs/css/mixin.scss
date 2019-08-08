@@ -15,6 +15,13 @@
     justify-content: center;
 }
 
+@mixin absolute-center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /********iphonex适配*********/
 @mixin iphonex($paddingMargin: padding, $postion: bottom) {
     #{$paddingMargin}-#{$postion}: constant(safe-area-inset-#{$postion});

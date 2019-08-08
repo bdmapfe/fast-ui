@@ -1,6 +1,6 @@
 <template>
-    <div class="switch-container" :class="[{'switch-container-light':isActive},'switch-'+size]">
-        <div @click = "toggle" class="switch-btn"></div>
+    <div class="switch-container" :class="[{'switch-container-light': isActive}, 'switch-' + size]">
+        <div @click="toggle" class="switch-btn"></div>
     </div>
 </template>
 
@@ -9,14 +9,14 @@ export default {
     name: "Radio",
     data() {
         return {
-            // 缓存父组件传来的bollean减少组件耦合ß
+            // 是否是激活状态
             isActive: false,
             // 节流
-            isAnimating:false
+            isAnimating: false
         }
     },
     props:{
-        // 父组件传来的初始bollean值
+        // 父组件传来的初始值
         active: {
             type: Boolean,
         },
@@ -27,16 +27,16 @@ export default {
     },
     methods: {
         // 节流处理
-        toggle: function() {
-            if(this.isAnimating){
+        toggle() {
+            if (this.isAnimating) {
                 return;
             }
             this.isAnimating = false;
             this.isActive = !this.isActive;
             setTimeout(() => {
                 this.isAnimating = false;
-                this.$emit("change", this.isActive);
-            },300);
+                this.$emit("switch-change", this.isActive);
+            }, 300);
         }
     },
     create() {
@@ -55,13 +55,13 @@ export default {
         padding: 4px;
         border-radius: 1000px;
         transition: all 0.3s;
-        border: 3px solid gray;
+        border: 3px solid $general-black-three;
 
         .switch-btn {
             position: relative;
             border-radius: 50%;
             transition: all 0.3s;
-            background-color: gray;
+            background-color: $general-black-three;
             left: 0;
         }
         &.switch-small{
@@ -90,12 +90,12 @@ export default {
         }
     }
     .switch-container-light {
-        border-color: #3385ff;
+        border-color: $assist-blue-color;
 
         .switch-btn {
-            background-color: #3385ff;
+            background-color: $assist-blue-color;
             left: 100%;
-            transform: translate(-100%,0);
+            transform: translate(-100%, 0);
         }
     }
 </style>

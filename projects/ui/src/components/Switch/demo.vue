@@ -2,21 +2,21 @@
     <div class="demo-wrapper">
         <h4>基本用法</h4>
         <div class="cell">
-            <nut-switch :active="true" ></nut-switch>
+            <fast-switch :active="true" ></fast-switch>
         </div>
         <h4>自定义尺寸大小</h4>
         <div class="cell">
-            <nut-switch :active="true" size="small" ></nut-switch>
+            <fast-switch :active="true" size="small" ></fast-switch>
         </div>
         <div class="cell">
-            <nut-switch :active="true" size="base" ></nut-switch>
+            <fast-switch :active="true" size="base" ></fast-switch>
         </div>
         <div class="cell">
-            <nut-switch :active="true" size="large"></nut-switch>
+            <fast-switch :active="true" size="large"></fast-switch>
         </div>
         <h4>change事件</h4>
         <div class="cell">
-            <nut-switch :active="true" @change="onChange"></nut-switch>
+            <fast-switch :active="true" @switch-change="onChange"></fast-switch>
         </div>
     </div>
 </template>
@@ -26,12 +26,10 @@
     export default {
         name: "Switch.demo.vue",
         components: {
-            'nut-switch': Switch
+            'fast-switch': Switch
         },
         data() {
-            return {
-
-            }
+            return {}
         },
         methods: {
             onChange(status) {

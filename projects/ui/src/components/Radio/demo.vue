@@ -2,45 +2,45 @@
     <div class="demo-wrapper">
         <h4>Radio基本用法</h4>
         <div class="cell">
-            <nut-radio v-model="radioVal" label="b">b</nut-radio>
+            <fast-radio v-model="radioVal" label="2">b</fast-radio>
         </div>
         <h4>组合使用Radio</h4>
         <div class="cell">
-            <nut-radio v-model="radioVal1" label="b">b</nut-radio>
-            <nut-radio v-model="radioVal1" label="c">c</nut-radio>
+            <fast-radio v-model="radioVal1" label="2">b</fast-radio>
+            <fast-radio v-model="radioVal1" label="3">c</fast-radio>
         </div>
         <h4>RadioGroup基本用法</h4>
         <div class="cell">
-            <nut-radiogroup v-model="radioVal2">
-                <nut-radio label="b">b</nut-radio>
-                <nut-radio label="c">c</nut-radio>
-            </nut-radiogroup>
+            <fast-radiogroup v-model="radioVal2">
+                <fast-radio label="2">b</fast-radio>
+                <fast-radio label="3">c</fast-radio>
+            </fast-radiogroup>
         </div>
         <h4>自定义尺寸</h4>
         <div class="cell">
-            <nut-radio size="small" v-model="radioVal3" label="b">b</nut-radio>
+            <fast-radio size="small" v-model="radioVal3" label="2">b</fast-radio>
         </div>
         <div class="cell">
-            <nut-radio size="base" v-model="radioVal3" label="c">c</nut-radio>
+            <fast-radio size="base" v-model="radioVal3" label="3">c</fast-radio>
         </div>
         <div class="cell">
-            <nut-radio size="large" v-model="radioVal3" label="d">d</nut-radio>
+            <fast-radio size="large" v-model="radioVal3" label="4">d</fast-radio>
         </div>
         <h4>RadioGroup整体定义尺寸</h4>
         <div class="cell">
-            <nut-radiogroup size="small" v-model="radioVal4">
-                <nut-radio label="b">b</nut-radio>
-                <nut-radio label="c">c</nut-radio>
-                <nut-radio label="d">d</nut-radio>
-            </nut-radiogroup>
+            <fast-radiogroup size="small" v-model="radioVal4">
+                <fast-radio label="2">b</fast-radio>
+                <fast-radio label="3">c</fast-radio>
+                <fast-radio label="4">d</fast-radio>
+            </fast-radiogroup>
         </div>
         <h4>禁用动效</h4>
         <div class="cell">
-            <nut-radiogroup v-model="radiogroup1" :animated="false">
-                <nut-radio label="b">b</nut-radio>
-                <nut-radio label="c">c</nut-radio>
-                <nut-radio label="d">d</nut-radio>
-            </nut-radiogroup>
+            <fast-radiogroup v-model="groupValue" :animated="false">
+                <fast-radio label="2">b</fast-radio>
+                <fast-radio label="3">c</fast-radio>
+                <fast-radio label="4">d</fast-radio>
+            </fast-radiogroup>
         </div>
     </div>
 </template>
@@ -52,18 +52,18 @@
     export default {
         name: "Radio.demo.vue",
         components: {
-            'nut-radio': Radio,
-            'nut-radiogroup': Radiogroup,
-            'nut-cell': Cell
+            'fast-radio': Radio,
+            'fast-radiogroup': Radiogroup,
+            'fast-cell': Cell
         },
         data() {
             return {
-                radioVal: "a",
-                radioVal1: "a",
-                radioVal2: "a",
-                radioVal3: "a",
-                radioVal4: "a",
-                radiogroup1: "a"
+                radioVal: "2",
+                radioVal1: "1",
+                radioVal2: "1",
+                radioVal3: "1",
+                radioVal4: "1",
+                groupValue: "1"
             }
         }
     }
