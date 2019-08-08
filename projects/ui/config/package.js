@@ -160,6 +160,14 @@ const uiPackage = {
                   type: 'component',
                   author: 'zxy',
                   hasDemo: true
+              },
+              {
+                  name: 'Scroller',
+                  version: '1.0.0',
+                  desc: '滚动',
+                  type: 'component',
+                  author: 'luoqin',
+                  hasDemo: true
               }
           ]
       },
