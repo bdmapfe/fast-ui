@@ -36,9 +36,11 @@
         </div>
         <h4>禁用动效</h4>
         <div class="cell">
-            <nut-radio v-model="radioVal5" label="b">b</nut-radio>
-            <nut-radio v-model="radioVal5" label="c">c</nut-radio>
-            <nut-radio v-model="radioVal5" label="d">d</nut-radio>
+            <nut-radiogroup v-model="radiogroup1" :animated="false">
+                <nut-radio label="b">b</nut-radio>
+                <nut-radio label="c">c</nut-radio>
+                <nut-radio label="d">d</nut-radio>
+            </nut-radiogroup>
         </div>
     </div>
 </template>
@@ -61,7 +63,7 @@
                 radioVal2: "a",
                 radioVal3: "a",
                 radioVal4: "a",
-                radioVal5: "a"
+                radiogroup1: "a"
             }
         }
     }

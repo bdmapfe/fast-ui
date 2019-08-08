@@ -1,11 +1,11 @@
 <template>
-    <div class="checkout-container">
-        <input class="checkout-input" :class="{'checkout-choice': checkbox}" type="checkbox" :name="name" @click = "getfocus" />
+    <label :class="['checkout-container','checkout-size-'+size]">
+        <input @change="changeEvt" :class="{'checkout-choice': checkbox,'checkbox-ani':animation}" type="checkbox" :name="name" @click = "getfocus" />
         <label v-if="label" class="checkout-label">{{label}}</label>
         <label v-else class="checkout-label">
             <slot></slot>
         </label>
-    </div>
+    </label>
 </template>
 
 <script>
@@ -28,14 +28,25 @@ export default {
         checkbox: {
             type: Boolean,
         },
-        label:{
+        label: {
             type: String,
             default: ''
+        },
+        size: {
+            type: String,
+            default: 'base'
+        },
+        animation: {
+            type: Boolean,
+            default: true
         }
     },
     methods: {
         getfocus: function() {
             this.$emit('focus',!this.checkbox);
+        },
+        changeEvt(event) {
+            this.$emit('change');
         }
     }
 }
@@ -43,25 +54,42 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../libs/css/public.scss";
+@import "../../libs/css/pulse.scss";
     .checkout-container {
         position: relative;
-        @include flex();
-        align-items: center;
-        background-color: white;
-        padding: 20px;
 
         .checkout-label {
+            position: relative;
             font-size: $font-size-normal;
-            text-indent: 10px;
+            vertical-align: middle;
+
         }
-        .checkout-input {
+
+        input {
             position: relative;
             width: 30px;
             height: 30px;
-            border: 1px black solid;
+            border: 1px gray solid;
             border-radius: 50%;
-            float: left;
-            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 0px;
+            margin-right: 5px;
+
+            &::after {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                content: '';
+                width: 0;
+                height: 0;
+                transform: translate(-50%, -50%);
+                background: $primary-color;
+                border-radius: 50%;
+                opacity: 0;
+                pointer-events: none;
+                background: #3385ff;
+            }
         }
         .checkout-choice {
             background-color: #3385ff;
@@ -69,6 +97,40 @@ export default {
             background-size: 20px 20px;
             background-repeat:no-repeat;
             background-position: center;
+            border-color: #3385ff;
+            &:not(:disabled).checkbox-ani::after {
+                animation: nutPulse 1s;
+            }
+        }
+
+        &.checkout-size-small {
+            input {
+                width: 20px;
+                height: 20px;
+            }
+            .checkbox-label {
+                
+            }
+        }
+
+        &.checkout-size-base {
+            input {
+                width: 30px;
+                height: 30px;
+            }
+            .checkbox-label {
+
+            }
+        }
+
+        &.checkout-size-large {
+            input {
+                width: 40px;
+                height: 40px;
+            }
+            .checkbox-label {
+                
+            }
         }
     }
 </style>

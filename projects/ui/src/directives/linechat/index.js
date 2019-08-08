@@ -18,7 +18,8 @@ const lineChat = (el, binding, vnode)=> {
 
     let context = canvas.getContext('2d');
 
-    let pathLine = conf.scoreLines;
+    let pathLine = conf.lineInfo;
+    let tips = conf.tipsInfo;
 
     // // Vector，一般用来表示向量，但有的时候也用来当作点来进行一计算
     // let Vector = function(x, y) {
@@ -85,26 +86,24 @@ const lineChat = (el, binding, vnode)=> {
         // 绘制折线图
         drawLineChat({
             strokeStyle: pathLine.lineStyle.strokeStyle,
-            path: pathLine.lineInfo,
+            path: pathLine.linePointInfo,
             fillStyle: pathLine.lineStyle.fillStyle,
             width: pathLine.lineStyle.width,
             gradientBGColor: pathLine.lineStyle.gradientBGColor
         });
 
+
+
         // 绘制标注信息
-        for (let i = 0; i < pathLine.lineInfo.length; i++) {
-            console.log('1');
-            if (typeof(pathLine.lineInfo[i].text) != 'undefined') {
+        for (let i = 0; i < tips.tipsPointInfo.length; i++) {
+            if (typeof(tips.tipsPointInfo[i].text) != 'undefined') {
                 // 绘制分数浮层
                 drawTip({
-                    location: [pathLine.lineInfo[i].x, transformCoordinate(pathLine.lineInfo[i].y)],
-                    text: pathLine.lineInfo[i].text,
-                    offsetY: pathLine.lineInfo[i].textOffset[1],
-                    offsetX: pathLine.lineInfo[i].textOffset[0],
+                    location: [tips.tipsPointInfo[i].x, transformCoordinate(tips.tipsPointInfo[i].y)],
+                    text: tips.tipsPointInfo[i].text,
                     angleX: 10,
-                    // 默认使用折线颜色
-                    textColor: pathLine.lineInfo[i].text.textColor || pathLine.lineStyle.strokeStyle,
-                    textBgColor: pathLine.lineInfo[i].text.textColor || pathLine.lineStyle.strokeStyle
+                    textColor: tips.tipsStyle.textColor,
+                    textBgColor: tips.tipsStyle.textBgColor
                 });
             }
         }
@@ -242,24 +241,24 @@ const lineChat = (el, binding, vnode)=> {
     function drawTip(options) {
         context.beginPath();
         context.strokeStyle = options.strokeStyle || "rgba(249,241,232,0.6)";
-        context.fillStyle = options.fillStyle || "rgba(249,241,232,0.6)";
+        context.fillStyle = options.textBgColor || "rgba(249,241,232,0.6)";
         context.lineWidth = options.width || 1;
 
         // 画小三角形
         // console.log(options.location);
         context.beginPath();
-        context.moveTo(options.location[0] - options.offsetX + options.angleX, options.location[1] - options.offsetY + 40);
-        context.lineTo(options.location[0] - options.offsetX + 5 + options.angleX, options.location[1] - options.offsetY + 45);
-        context.lineTo(options.location[0] - options.offsetX + 10 + options.angleX, options.location[1] - options.offsetY + 40);
+        context.moveTo(options.location[0] + options.angleX, options.location[1] + 40);
+        context.lineTo(options.location[0] + 5 + options.angleX, options.location[1] + 45);
+        context.lineTo(options.location[0] + 10 + options.angleX, options.location[1] + 40);
         context.fill();
         context.closePath();
         // 画长方形
-        context.fillRect(options.location[0] - options.offsetX, options.location[1] - options.offsetY,76,40)
+        context.fillRect(options.location[0], options.location[1],76,40)
         context.stroke();
         // 画文字
         drawText({
             text: options.text,
-            point: [options.location[0] - options.offsetX + 40, options.location[1] - options.offsetY + 24],
+            point: [options.location[0] + 40, options.location[1] + 24],
             fillStyle:  options.textColor
         });
     }

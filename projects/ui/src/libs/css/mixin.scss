@@ -47,3 +47,30 @@
         margin-left: $size/2;
     }
 }
+
+// fixed定位全屏
+@mixin fixed-fullscreen($zIndex: 1000, $bgColor: #fff) {
+    position: fixed;
+    z-index: $zIndex;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $bgColor;
+}
+
+// 构造动画
+@mixin make-animation($keyframeName, $duration: .5s, $fillMode: both, $timeFunc: ease-in-out) {
+    .#{$keyframeName}-enter-active,
+    .#{$keyframeName}-leave-active {
+        animation-duration: $duration;
+        animation-fill-mode: $fillMode;
+        animation-timing-function: $timeFunc;
+    }
+    .#{$keyframeName}-enter-active {
+        animation-name: #{$keyframeName}In;
+    }
+    .#{$keyframeName}-leave-active {
+        animation-name: #{$keyframeName}Out;
+    }
+}

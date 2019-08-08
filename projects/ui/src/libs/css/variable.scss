@@ -22,13 +22,15 @@ $btn-primary-bg-color: $assist-blue-color;
 $btn-primary-border-color: $assist-blue-color;
 $btn-primary-bg-color-light: rgba(51, 133, 255, .5);
 
-/*页面+卡片背景色*/
+/*页面+卡片+蒙层背景色*/
 $page-color-bg-ios: $primary-color;
 $page-color-bg-android: $general-black-six;
 
 $card-color-bg: $secondary-color;
 $card-color-bg-pressed: $secondary-color-dark;
 $card-content-seg-color: $general-black-five;
+
+$mask-color-bg: rgba(0, 0, 0, 0.5);
 
 /*文字色（一级信息，普通级别、辅助信息、不可点击）*/
 $text-color-senior: $general-black-one;
@@ -62,16 +64,19 @@ $font-size-normal: 28px;
 $font-size-minor: 26px;
 $font-size-mini: 18px;
 
-
-/****animations****/
-
 /****border(卡片描边,icon圆角)****/
 $border-card: none;
 $border-radius-icon: 2px;
+$border-card-item: 1Px solid $general-black-six;
 
 /****shadow****/
 
 /****zIndex****/
+$zindex-mask: 1000 !default;
+$zindex-actionsheet: 1001 !default;
+$zindex-dialog: 1002 !default;
+$zindex-toast: 1003 !default;
+$zindex-picker: 1004 !default;
 
 /****disabled****/
 
@@ -99,3 +104,65 @@ $btn-border-color-disabled-white: $general-black-four;
 $btn-bg-color-blue: $general-black-eight;
 $btn-border-color-blue: $assist-blue-color;
 $btn-bg-color-disabled-blue: $general-black-four;
+
+/****animations****/
+@keyframes slideUpIn {
+    0% {
+        transform: translateY(100%);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes slideUpOut {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+        visibility: hidden;
+    }
+}
+
+@keyframes slideDownIn {
+    0% {
+        transform: translateY(-100%);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes slideDownOut {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        visibility: hidden;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

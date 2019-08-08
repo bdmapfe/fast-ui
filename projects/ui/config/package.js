@@ -18,7 +18,7 @@ const uiPackage = {
                   version: '1.0.0',
                   desc: '列表项',
                   type: 'component',
-                  author: 'hwm',
+                  author: 'zxy',
                   hasDemo: true,
                   hasDoc: true
               }
@@ -108,6 +108,15 @@ const uiPackage = {
                 author: 'lb',
                 hasDemo: true,
                 hasDoc: true
+            },
+            {
+                  name: 'Rate',
+                  version: '1.0.0',
+                  desc: '评分',
+                  type: 'component',
+                  author: 'cc',
+                  hasDemo: true,
+                  hasDoc: true
             }
           ]
       },
@@ -119,6 +128,15 @@ const uiPackage = {
                   name: 'Input',
                   version: '1.0.0',
                   desc: '文本输入框',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true,
+                  hasDoc: true
+              },
+              {
+                  name: 'ActionSheet',
+                  version: '1.0.0',
+                  desc: '动作面板',
                   type: 'component',
                   author: 'hwm',
                   hasDemo: true,
@@ -152,6 +170,14 @@ const uiPackage = {
                   desc: '折线图组件',
                   type: 'directive',
                   author: 'cc',
+                  hasDemo: true
+              },
+              {
+                  name: 'Skeleton',
+                  version: '1.0.0',
+                  desc: '骨架图',
+                  type: 'component',
+                  author: 'zxy',
                   hasDemo: true
               }
           ]

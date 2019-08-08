@@ -1,5 +1,5 @@
 <template>
-    <div class="switch-container" :class="{'switch-container-light':isActive}">
+    <div class="switch-container" :class="[{'switch-container-light':isActive},'switch-'+size]">
         <div @click = "toggle" class="switch-btn"></div>
     </div>
 </template>
@@ -20,6 +20,10 @@ export default {
         active: {
             type: Boolean,
         },
+        size: {
+            type: String,
+            default: 'base'
+        }
     },
     methods: {
         // 节流处理
@@ -29,8 +33,9 @@ export default {
             }
             this.isAnimating = false;
             this.isActive = !this.isActive;
-            seTimeout(() => {
+            setTimeout(() => {
                 this.isAnimating = false;
+                this.$emit("change", this.isActive);
             },300);
         }
     },
@@ -54,20 +59,43 @@ export default {
 
         .switch-btn {
             position: relative;
-            width: 26px;
-            height: 26px;
             border-radius: 50%;
             transition: all 0.3s;
             background-color: gray;
-            left: 0px;
+            left: 0;
+        }
+        &.switch-small{
+            width: 40px;
+            height: 16px;
+            .switch-btn {
+                width: 16px;
+                height: 16px;
+            }
+        }
+        &.switch-base{
+            width: 40px;
+            height: 26px;
+            .switch-btn {
+                width: 26px;
+                height: 26px;
+            }
+        }
+        &.switch-large{
+            width: 60px;
+            height: 32px;
+            .switch-btn {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
     .switch-container-light {
-        border: 3px solid #3385ff;
+        border-color: #3385ff;
 
         .switch-btn {
             background-color: #3385ff;
-            left: 34px;
+            left: 100%;
+            transform: translate(-100%,0);
         }
     }
 </style>
