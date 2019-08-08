@@ -1,0 +1,46 @@
+<template>
+    <div class="demo-wrapper">
+        <h4>基本用法</h4>
+        <div class="cell">
+            <fast-switch :active="true" ></fast-switch>
+        </div>
+        <h4>自定义尺寸大小</h4>
+        <div class="cell">
+            <fast-switch :active="true" size="small" ></fast-switch>
+        </div>
+        <div class="cell">
+            <fast-switch :active="true" size="base" ></fast-switch>
+        </div>
+        <div class="cell">
+            <fast-switch :active="true" size="large"></fast-switch>
+        </div>
+        <h4>change事件</h4>
+        <div class="cell">
+            <fast-switch :active="true" @switch-change="onChange"></fast-switch>
+        </div>
+    </div>
+</template>
+
+<script>
+    import Switch from './Switch.vue'
+    export default {
+        name: "Switch.demo.vue",
+        components: {
+            'fast-switch': Switch
+        },
+        data() {
+            return {}
+        },
+        methods: {
+            onChange(status) {
+                alert(status);
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+    .cell {
+        padding: 20px;
+    }
+</style>
