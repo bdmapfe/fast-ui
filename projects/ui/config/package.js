@@ -24,7 +24,7 @@ const uiPackage = {
               }
           ]
       },
-      { 
+      {
           name: '基础组件',
           nameEn: 'basic',
           list: [
@@ -187,6 +187,15 @@ const uiPackage = {
                   type: 'component',
                   author: 'zxy',
                   hasDemo: true
+              },
+              {
+                  name: 'CountDown',
+                  version: '1.0.0',
+                  desc: '倒计时',
+                  type: 'component',
+                  author: 'yst',
+                  hasDemo: true,
+                  hasDoc: true
               },
               {
                   name: 'Scroller',
