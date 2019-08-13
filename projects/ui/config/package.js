@@ -196,6 +196,14 @@ const uiPackage = {
                   author: 'yst',
                   hasDemo: true,
                   hasDoc: true
+              },
+              {
+                  name: 'Scroller',
+                  version: '1.0.0',
+                  desc: '滚动',
+                  type: 'component',
+                  author: 'luoqin',
+                  hasDemo: true
               }
           ]
       },
