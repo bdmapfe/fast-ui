@@ -37,7 +37,7 @@
     .button-container {
         .poa {
             position: absolute;
-            bottom: 100px;
+            bottom: 150px;
         }
     }
 </style>
