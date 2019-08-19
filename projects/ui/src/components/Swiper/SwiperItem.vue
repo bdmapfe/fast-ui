@@ -42,7 +42,7 @@ export default {
             const { pageTransition, swipeDirection } = this.swiper;
             if (pageTransition && swipeDirection) {
                 if (STATUS.ENTER === this.status) {
-                    console.log(swipeDirection)
+                    console.log(swipeDirection);
                     const enterDirections = {
                         Up: 'Down',
                         Down: 'Up',

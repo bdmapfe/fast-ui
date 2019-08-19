@@ -3,42 +3,42 @@
         <h4>基本用法</h4>
         <p class="desc">input-basic</p>
         <div class="test-box">
-            <fast-input label="车牌号码：" placeholder="请输入车牌号"></fast-input>
+            <fast-input label="车牌号码：" v-model="testValue1" placeholder="请输入车牌号"></fast-input>
         </div>
 
         <p class="desc">input-no-border</p>
         <div class="test-box">
-            <fast-input label="车牌号码：" :has-border="false" placeholder="请输入车牌号"></fast-input>
+            <fast-input label="车牌号码：" v-model="testValue1" :has-border="false" placeholder="请输入车牌号"></fast-input>
         </div>
 
         <p class="desc">input-disabled</p>
         <div class="test-box">
-            <fast-input label="车牌号码：" disabled="true" placeholder="请输入车牌号"></fast-input>
+            <fast-input label="车牌号码：" v-model="testValue2" disabled="true" placeholder="请输入车牌号"></fast-input>
         </div>
 
         <p class="desc">input-readonly</p>
         <div class="test-box">
-            <fast-input label="车牌号码：" value="京A34569" readonly="true" placeholder="请输入车牌号"></fast-input>
+            <fast-input label="车牌号码：" v-model="testValue2"  readonly="true" placeholder="请输入车牌号"></fast-input>
         </div>
 
         <p class="desc">input-maxlength</p>
         <div class="test-box">
-            <fast-input label="车牌号码：" maxlength="8" placeholder="车牌号长度不超过8位"></fast-input>
+            <fast-input label="车牌号码："  v-model="testValue1" maxlength="8" placeholder="车牌号长度不超过8位"></fast-input>
         </div>
 
         <p class="desc">input-backgroundColor</p>
         <div class="test-box">
-            <fast-input label="车牌号码：" :has-bg-color="true" placeholder="车牌号长度不超过8位"></fast-input>
+            <fast-input label="车牌号码：" v-model="testValue1" :has-bg-color="true" placeholder="车牌号长度不超过8位"></fast-input>
         </div>
 
         <p class="desc">input-noclear</p>
         <div class="test-box">
-            <fast-input label="车牌号码：" :clear-btn-exist="false" placeholder="车牌号长度不超过8位"></fast-input>
+            <fast-input label="车牌号码：" v-model="testValue1" :clear-btn-exist="false" placeholder="车牌号长度不超过8位"></fast-input>
         </div>
 
         <p class="desc">input-events</p>
         <div class="test-box">
-            <fast-input label="车牌号码：" @input="inputChange" placeholder="车牌号长度不超过8位"></fast-input>
+            <fast-input label="车牌号码：" v-model="testValue1" @input="inputChange" placeholder="车牌号长度不超过8位"></fast-input>
         </div>
     </div>
 </template>
@@ -49,6 +49,12 @@
         name: "Input.demo",
         components: {
             'fast-input': Input
+        },
+        data() {
+            return {
+                testValue1: '',
+                testValue2: '京N34563'
+            }
         },
         methods: {
             inputChange(value) {

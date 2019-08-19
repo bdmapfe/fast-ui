@@ -9,15 +9,18 @@ export default {
     name: "Radio",
     data() {
         return {
-            // 是否是激活状态
-            isActive: false,
             // 节流
             isAnimating: false
         }
     },
+    // 注册v-model的更新事件，在本组件抛出isCheckedChanged事件的时候，父组件更新isChecked，并传递到本组件
+    model: {
+        prop: 'isActive',
+        event: 'isActiveChanged'
+    },
     props:{
         // 父组件传来的初始值
-        active: {
+        isActive: {
             type: Boolean,
         },
         size: {
@@ -32,15 +35,12 @@ export default {
                 return;
             }
             this.isAnimating = false;
-            this.isActive = !this.isActive;
+            this.$emit('isActiveChanged', !this.isActive);
             setTimeout(() => {
                 this.isAnimating = false;
-                this.$emit("switch-change", this.isActive);
+                this.$emit('switch-change', this.isActive);
             }, 300);
         }
-    },
-    create() {
-        this.isActive = this.active;
     }
 }
 </script>
