@@ -47,7 +47,7 @@ export default {
         },
 
         interval: {
-            type: Number,
+            type: [Number, String],
             default: 3000
         },
 
@@ -82,6 +82,9 @@ export default {
     },
 
     methods: {
+        /**
+         * 用于处理自动轮播
+         */
         startTimer() {
             if (this.interval <= 0 || !this.autoplay) return;
             this.timer = setInterval(this.playSlides, this.interval);
@@ -90,8 +93,12 @@ export default {
         pauseTimer() {
             clearInterval(this.timer);
         },
-
+        /**
+         * 自动播放slide
+         * 默认垂直类型，向上轮播； 水平类型，向左轮播
+         */
         playSlides() {
+            this.swipeDirection = this.type === 'vertical' ? 'Up' : 'Left';
             this.next(this.swipeDirection);
         },
 
@@ -149,6 +156,7 @@ export default {
             }
             // this.swipeDirection = 'Up';
             this.swipeDirection = direction;
+            console.log(this.swipeDirection);
             this.setActiveItem(nextIndex);
         },
 
@@ -169,7 +177,7 @@ export default {
         setActiveItem(index) {
             index = Number(index);
             const oldIndex = this.activeIndex;
-            this.activeIndex = index
+            this.activeIndex = index;
             if (oldIndex !== this.activeIndex) {
                 this.oldIndex = oldIndex;
                 this.$emit('beforeChange', this.activeIndex, this.oldIndex);

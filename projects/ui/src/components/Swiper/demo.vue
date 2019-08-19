@@ -13,26 +13,33 @@
         </div>
         <div class="operation-card">
             <p class="opertaion-item">Swiper Type</p>
-            <select v-model="swiperType" class="select-container">
+            <fast-radiogroup v-model="swiperType" :animated="false">
+                <fast-radio v-for="item in swiperTypes" :label="item">{{item}}</fast-radio>
+            </fast-radiogroup>
+            <!--<select v-model="swiperType" class="select-container">
                 <option v-for="(item, index) in swiperTypes" :key="index" :label="item" :value="item"></option>
-            </select>
-            <p class="opertaion-item">swipe Transition</p>
+            </select>-->
+            <p class="opertaion-item">Swipe Transition</p>
             <select v-model="pageTransition" class="select-container">
                 <option v-for="(item, index) in pageTransitions" :key="index" :label="item" :value="item"></option>
             </select>
             <p class="opertaion-item">Autoplay</p>
-            <input class="checkbox-box" type="checkbox" v-model="autoplay"/>&nbsp;autoplay
+            <fast-switch v-model="autoplay"></fast-switch>
             <p class="opertaion-item">Interval</p>
-            <input :disabled="!autoplay" controls-position="right" v-model="interval" :min="100" :max="10000" :step="100"/>
+            <fast-input placeholder="请输入自动播放时间" :disabled="!autoplay" :clear-btn-exist="false" v-model="interval"></fast-input>
             <p class="opertaion-item">Loop</p>
-            <input class="checkbox-box" type="checkbox" v-model="loop"/>&nbsp;loop
+            <fast-switch v-model="loop"></fast-switch>
             <p class="opertaion-item">Show Indicator</p>
-            <input class="checkbox-box" type="checkbox" v-model="showIndicator"/>&nbsp;indicator
+            <fast-switch v-model="showIndicator"></fast-switch>
         </div>
     </div>
 </template>
 
 <script>
+    import fastRadio from '../Radio/Radio';
+    import fastInput from '../Input/Input';
+    import fastRadiogroup from '../Radiogroup/Radiogroup';
+    import fastSwitch from '../Switch/Switch';
     import fastSwiper from './Swiper.vue';
     import fastSwiperItem from './SwiperItem.vue';
 
@@ -50,6 +57,10 @@
 
     export default {
         components: {
+            fastRadio,
+            fastRadiogroup,
+            fastInput,
+            fastSwitch,
             fastSwiper,
             fastSwiperItem
         },
@@ -69,7 +80,7 @@
                     '#7FB3D5'
                 ],
                 loop: true,
-                autoplay: false,
+                autoplay: true,
                 interval: 1000,
                 showIndicator: false,
                 pageTransition: PAGE_TRANSITIONS[0],

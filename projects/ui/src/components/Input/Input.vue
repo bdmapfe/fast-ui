@@ -16,6 +16,10 @@
     export default {
         name: 'Input',
         props: {
+            value: {
+                type: [String, Number, Boolean],
+                default: ''
+            },
             label: {
                 type: String,
                 default: ''
@@ -24,28 +28,24 @@
                 type: String,
                 default: 'text'
             },
-            value: {
-                type: String,
-                default: ''
-            },
             placeholder: {
                 type: String,
                 default: '请输入相应内容'
             },
             disabled: {
-                type: Boolean,
+                type: [Boolean, String],
                 default: false
             },
             readonly: {
-                type: Boolean,
+                type: [Boolean, String],
                 default: false
             },
             maxlength: {
-                type: String,
+                type: [String, Number],
                 default: 100
             },
             hasBorder: {
-                type: Boolean,
+                type: [Boolean, String],
                 default: true
             },
             border: {
@@ -53,7 +53,7 @@
                 default: '1px solid #ededed'
             },
             hasOutline: {
-                type: Boolean,
+                type: [Boolean, String],
                 default: false
             },
             outline: {
@@ -69,7 +69,7 @@
                 default: '#f9f8f7'
             },
             hasPadding: {
-                type: Boolean,
+                type: [Boolean, String],
                 default: true
             },
             padding: {
@@ -77,17 +77,13 @@
                 default: '10px 15px'
             },
             clearBtnExist: {
-                type: Boolean,
+                type: [Boolean, String],
                 default: true
-            },
-            clearBtnShow: {
-                type: Boolean,
-                default: false
             }
         },
         data() {
             return {
-
+                clearBtnShow: true
             }
         },
         computed: {
@@ -103,7 +99,7 @@
         methods: {
             clearText() {
                 this.$emit('clear');
-                this.$emit('fast-input', '');
+                this.$emit('input', '');
                 this.clearBtnShow = false;
             },
             inputHandler(event) {
