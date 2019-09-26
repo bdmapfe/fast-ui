@@ -8,7 +8,7 @@
                 </div>
                 公里
             </div>
-            <div @click="toggleAnimation">{{aniTip}}</div>
+            <div @click="toggleAnimation" class="btn">{{aniTip}}</div>
         </div>
     </div>
 </template>
@@ -29,21 +29,27 @@
                     dot: 2 // 保留几位小数点
                 },
                 isShowAni: false,
-                aniTip: '显示动效'
+                aniTip: '点击显示动效'
             }
         },
         methods: {
             toggleAnimation() {
                 this.isShowAni = !this.isShowAni;
-                this.aniTip = !this.isShowAni ? '显示动效' : '重置动效';
+                this.aniTip = !this.isShowAni ? '点击显示动效' : '点击重置动效';
             }
         }
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    .demo-container {
+        padding: 50px;
+    }
     .distance {
         display: inline-block;
         width: 300px;
+    }
+    .btn {
+        margin-top: 30px;
     }
 </style>

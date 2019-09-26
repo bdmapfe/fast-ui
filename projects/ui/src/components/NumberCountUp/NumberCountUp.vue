@@ -23,7 +23,9 @@
                         const aniTarget = binding.value;
                         const targetIndex = options.numList.indexOf(aniTarget);
                         const aniItem = el.firstElementChild;
-                        const translateY = -targetIndex * aniItem.clientHeight + 'px';
+                        // 获取精准高度，clientHeight会四舍五入，导致数字错位
+                        const preciseHeight = parseFloat(window.getComputedStyle(aniItem).height);
+                        const translateY = -targetIndex * preciseHeight + 'px';
                         const translateYStyle = 'translateY(' + translateY + ')';
                         const transitionStyle = options.speed + 'ms ease-in-out';
 
