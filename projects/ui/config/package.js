@@ -157,6 +157,14 @@ const uiPackage = {
                   hasDemo: true
               },
               {
+                  name: 'NumberCountUp',
+                  version: '1.0.0',
+                  desc: 'NumberCountUp',
+                  type: 'component',
+                  author: 'hwm',
+                  hasDemo: true
+              },
+              {
                   name: 'changesvgcolor',
                   version: '1.0.0',
                   desc: 'svg素材更换颜色',
