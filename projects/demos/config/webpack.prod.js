@@ -29,7 +29,7 @@ if (process.env.SUPPORT_REMOTE) {
                 // 上传服务接口，插件会把文件逐个post到上传服务
                 receiver: remotes[address].receiver,
                 to: remotes[address].address,
-                test: /\.(js|html|png|jpe?g|gif|svg|css|map)$/
+                test: /\.(js|html|png|jpe?g|gif|svg|css)$/
             })
         );
     }
