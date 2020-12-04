@@ -32,7 +32,7 @@
         "@vue/component-compiler-utils": "^2.6.0",
         "better-scroll": "^1.15.2",
         "github-markdown-css": "^3.0.1",
-        "highlight.js": "^9.15.8",
+        "highlight.js": "^10.4.1",
         "mocha": "^6.1.4",
         "vue": "^2.6.10",
         "vue-router": "^3.0.1"
