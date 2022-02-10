@@ -59,7 +59,7 @@
         "fs": "0.0.1-security",
         "istanbul-instrumenter-loader": "^3.0.1",
         "node-filelist": "^1.0.0",
-        "node-sass": "^4.9.0",
+        "node-sass": "^7.0.0",
         "nyc": "^14.1.1",
         "path": "^0.12.7",
         "postcss-px2rem": "^0.3.0",
